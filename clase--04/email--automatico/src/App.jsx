@@ -4,7 +4,9 @@ import Celulares from "./componentes/Celulares/Celulares";
 import Computadoras from "./componentes/Computadoras/Computadoras";
 import Home from "./componentes/Home/Home";
 import Sillas from "./componentes/Sillas/Sillas";
-
+import Eventos from "./componentes/Eventos/Eventos";
+import Error from "./componentes/Error/Error";
+import Automatico from "./componentes/Automatico/Automatico";
 
 //React Router = es una libreria de enrutamiento. 
 //Nos permite navegar entre componentes sin tener que recargar la aplicación. 
@@ -26,9 +28,12 @@ const App = () => {
         <Routes>
           <Route path="/celulares" element = { <Celulares/> } />
           <Route path="/computadoras" element = { <Computadoras/> } />
-          <Route path="/sillas" element = { <Sillas/> } />
+          <Route path="/sillas/:id" element = { <Sillas/> } />
           <Route path="/contacto" element = { < Contacto /> } />
           <Route path="/" element = { < Home /> } />
+          <Route path="*" element = { <Error />} />
+          <Route path="/eventos" element = { <Eventos />} />
+          <Route path="/automatico" element = { <Automatico/> }  />
         </Routes>
       </BrowserRouter>
     </div>

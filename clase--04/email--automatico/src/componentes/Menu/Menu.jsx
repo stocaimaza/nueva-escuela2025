@@ -25,6 +25,15 @@ const Menu = () => {
                     <li>
                         <NavLink to="/contacto"> Contacto </NavLink>
                     </li>
+
+                    <li>
+                        <NavLink to="/eventos"> Eventos </NavLink>
+                    </li>
+
+                    <li>
+                        <NavLink to="/automatico"> Automático </NavLink>
+                    </li>
+
                 </ul>
             </nav>
 
