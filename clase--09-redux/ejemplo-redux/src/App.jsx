@@ -2,7 +2,9 @@ import { useSelector } from "react-redux";
 import CambiarModo from "./componentes/CambiarModo/CambiarModo";
 import Login from "./componentes/Login/Login";
 import Perfil from "./componentes/Perfil/Perfil";
+import GitHubLogin from "./componentes/GitHubLogin/GitHubLogin";
 import { useState } from "react";
+
 
 const App = () => {
   const [user, setUser] = useState(null); 
@@ -27,7 +29,7 @@ const App = () => {
         user ? (
           <Perfil user={user} setUser={setUser}/>
         ) : (
-           <Login setUser={setUser} />
+           <GitHubLogin setUser={setUser} />
         )
       }
     </div>
